@@ -48,8 +48,8 @@ class Fet extends React.Component {
             </form>
           
 
-            {newUsers && newUsers.map((a,i) =>{
-              return <table>
+            
+               <table>
 
                     <tr className="t1"  >
                         <th>_id</th>
@@ -58,20 +58,21 @@ class Fet extends React.Component {
                         <th>phone</th>
                     </tr>
 
-                    
-                   <tr className="t2" key={i} >
+                    {newUsers && newUsers.map((a,i) =>{
+                 return  <tr className="t2" key={i} >
                         <td>{a.id}</td>
                         <td>{a.name}</td>
                         <td>{a.email}</td>
                         <td>{a.phone}</td>
 
                     </tr>
+                    })}
 
 
     
                 </table>
 
-})}
+
 
 
                 </div>
